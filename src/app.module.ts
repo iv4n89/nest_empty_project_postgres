@@ -3,9 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductsModule } from './products/products.module';
 import { CommonModule } from './common/common.module';
-import { SeedModule } from './seed/seed.module';
 import { FilesModule } from './files/files.module';
 
 @Module({
@@ -23,12 +21,7 @@ import { FilesModule } from './files/files.module';
       synchronize: true,
     }),
 
-    ProductsModule,
-
     CommonModule,
-
-    SeedModule,
-
     FilesModule,
   ],
   controllers: [AppController],
